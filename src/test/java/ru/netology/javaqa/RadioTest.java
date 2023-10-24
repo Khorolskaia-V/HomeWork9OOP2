@@ -61,6 +61,7 @@ class RadioTest {
         int actual = radio.getRadioStation();
         Assertions.assertEquals(5, actual);
     }
+
     @Test
     public void shouldBe11More() {
         Radio radio = new Radio(-15);
