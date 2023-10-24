@@ -35,6 +35,7 @@ class RadioTest {
         Assertions.assertEquals(9, radio.getRadioStation());
     }
 
+
     @Test
     public void shouldBeMoreOrEqualLeftBound() {
         Radio radio = new Radio();
@@ -50,6 +51,26 @@ class RadioTest {
         radio.setRadioStation(500);
         Assertions.assertEquals(3, radio.getRadioStation());
     }
+
+    @Test
+    public void shouldBeMore() {
+        Radio radio = new Radio(15);
+
+        radio.setRadioStation(5);
+        radio.setRadioStation(15);
+        int actual = radio.getRadioStation();
+        Assertions.assertEquals(5, actual);
+    }
+    @Test
+    public void shouldBe11More() {
+        Radio radio = new Radio(-15);
+
+        radio.setRadioStation(-5);
+        radio.setRadioStation(-12);
+        int actual = radio.getRadioStation();
+        Assertions.assertEquals(0, actual);
+    }
+
 
     @Test
     public void shouldBeVolumeMinus() {
